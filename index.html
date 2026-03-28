@@ -3,165 +3,225 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Primary Meta Tags -->
-    <title>Лучшая экскурсия в Махачкале</title>
-    <meta name="title" content="Лучшая экскурсия в Махачкале">
-    <meta name="description" content="Лучшая экскурсия в Махачкале на 2026 год">
-    <meta name="author" content="Милана Ларионова">
-    <meta name="keywords" content="Лучшая экскурсия в Махачкале Лучшая экскурсия в Махачкале на 2026 год">
-    
-    <!-- Webmaster Verification -->
+
+    <title>{{ARTICLE_TITLE}}</title>
+    <meta name="title" content="{{ARTICLE_TITLE}}">
+    <meta name="description" content="{{ARTICLE_DESCRIPTION}}">
+    <meta name="author" content="{{AUTHOR_NAME}}">
+    <meta name="keywords" content="{{ARTICLE_KEYWORDS}}">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="google-site-verification" content="k1naFcMKtZ0AU2hjBnyOV0ByIwQiO-JKxBl57AOcdxU">
-    <meta name="yandex-verification" content="22c7dab30f040f06">
-    
-    <!-- Open Graph / Facebook -->
+    <link rel="stylesheet" href="/styles.css"/>
+    <meta name="yandex-verification" content="{{YANDEX_VERIFICATION_CODE}}">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="canonical" href="{{ARTICLE_URL}}">
+
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://ekskursiya-v-mahachkale.vercel.app">
-    <meta property="og:title" content="Лучшая экскурсия в Махачкале">
-    <meta property="og:description" content="Лучшая экскурсия в Махачкале на 2026 год">
-    <meta property="og:image" content="https://ekskursiya-v-mahachkale.vercel.app/icon.png">
-    <meta property="og:site_name" content="Лучшая экскурсия в Махачкале">
+    <meta property="og:url" content="{{ARTICLE_URL}}">
+    <meta property="og:title" content="{{ARTICLE_TITLE}}">
+    <meta property="og:description" content="{{ARTICLE_DESCRIPTION}}">
+    <meta property="og:image" content="{{OG_IMAGE_URL}}">
+    <meta property="og:site_name" content="{{SITE_NAME}}">
     <meta property="og:locale" content="ru_RU">
-    <meta property="article:published_time" content="2026-01-10T21:13:48+00:00">
-    <meta property="article:author" content="Милана Ларионова">
+    <meta property="article:published_time" content="{{PUBLISH_DATE_ISO}}">
+    <meta property="article:modified_time" content="{{PUBLISH_DATE_ISO}}">
+    <meta property="article:author" content="{{AUTHOR_NAME}}">
     <meta property="article:section" content="Статьи">
-    
-    <!-- Twitter -->
+    <meta property="article:tag" content="{{ARTICLE_KEYWORDS}}">
+
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://ekskursiya-v-mahachkale.vercel.app">
-    <meta name="twitter:title" content="Лучшая экскурсия в Махачкале">
-    <meta name="twitter:description" content="Лучшая экскурсия в Махачкале на 2026 год">
-    <meta name="twitter:image" content="https://ekskursiya-v-mahachkale.vercel.app/icon.png">
-    <meta name="twitter:creator" content="Милана Ларионова">
-    
-    <!-- Favicon -->
+    <meta name="twitter:url" content="{{ARTICLE_URL}}">
+    <meta name="twitter:title" content="{{ARTICLE_TITLE}}">
+    <meta name="twitter:description" content="{{ARTICLE_DESCRIPTION}}">
+    <meta name="twitter:image" content="{{OG_IMAGE_URL}}">
+    <meta name="twitter:creator" content="{{AUTHOR_NAME}}">
+
     <link rel="icon" type="image/png" href="/icon.png">
     <link rel="apple-touch-icon" href="/icon.png">
-    
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="styles.css">
-    
-    <!-- Schema.org JSON-LD -->
+
+
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "Лучшая экскурсия в Махачкале",
-        "description": "Лучшая экскурсия в Махачкале на 2026 год",
-        "image": "https://ekskursiya-v-mahachkale.vercel.app/icon.png",
-        "datePublished": "2026-01-10T21:13:48+00:00",
-        "dateModified": "2026-01-10T21:13:48+00:00",
-        "author": {
-            "@type": "Person",
-            "name": "Милана Ларионова",
-            "description": "Эксперт в области туризма и культурного наследия, специализирующийся на уникальных достопримечательностях Южного Дагестана. Обладает многолетним опытом организации автопешеходных туров и глубокими знаниями о местной истории и традициях. Автор статьи о экскурсиях на экраноплан \"Лунь\" и древний город Дербент, предлагает путешественникам неповторимые маршруты, объединяющие природу, культуру и локальные истории региона.",
-            "image": "https://ui-avatars.com/api/?name=Милана+Ларионова&amp;size=120&amp;background=4f46e5&amp;color=fff&amp;bold=true"
-        },
-        "publisher": {
-            "@type": "Organization",
-            "name": "Лучшая экскурсия в Махачкале",
-            "url": "https://ekskursiya-v-mahachkale.vercel.app",
-            "logo": {
-                "@type": "ImageObject",
-                "url": "https://ekskursiya-v-mahachkale.vercel.app/icon.png"
+        "@graph": [
+            {
+                "@type": "Article",
+                "headline": {{ARTICLE_TITLE_JSON}},
+                "description": {{ARTICLE_DESCRIPTION_JSON}},
+                "image": ["{{OG_IMAGE_URL}}"],
+                "datePublished": "{{PUBLISH_DATE_ISO}}",
+                "dateModified": "{{PUBLISH_DATE_ISO}}",
+                "author": {
+                    "@type": "Person",
+                    "name": {{AUTHOR_NAME_JSON}},
+                    "description": {{AUTHOR_DESCRIPTION_JSON}},
+                    "image": "{{AUTHOR_AVATAR}}"
+                },
+                "publisher": {
+                    "@type": "Organization",
+                    "name": {{SITE_NAME_JSON}},
+                    "url": "{{SITE_URL}}",
+                    "logo": {
+                        "@type": "ImageObject",
+                        "url": "{{SITE_URL}}/icon.png"
+                    }
+                },
+                "mainEntityOfPage": {
+                    "@type": "WebPage",
+                    "@id": "{{ARTICLE_URL}}"
+                },
+                "articleSection": "Статьи",
+                "wordCount": {{WORD_COUNT}},
+                "timeRequired": "PT{{READING_TIME}}M",
+                "inLanguage": "ru-RU"
+            },
+            {
+                "@type": "Person",
+                "@id": "{{ARTICLE_URL}}#author",
+                "name": {{AUTHOR_NAME_JSON}},
+                "description": {{AUTHOR_DESCRIPTION_JSON}},
+                "image": "{{AUTHOR_AVATAR}}",
+                "jobTitle": "Эксперт"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": {{SITE_NAME_JSON}},
+                        "item": "{{SITE_URL}}"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Статьи",
+                        "item": "{{SITE_URL}}/articles/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": {{ARTICLE_TITLE_JSON}},
+                        "item": "{{ARTICLE_URL}}"
+                    }
+                ]
+            },
+            {
+                "@type": "WebPage",
+                "@id": "{{ARTICLE_URL}}#webpage",
+                "url": "{{ARTICLE_URL}}",
+                "name": {{ARTICLE_TITLE_JSON}},
+                "description": {{ARTICLE_DESCRIPTION_JSON}},
+                "isPartOf": {
+                    "@type": "WebSite",
+                    "name": {{SITE_NAME_JSON}},
+                    "url": "{{SITE_URL}}"
+                },
+                "about": {
+                    "@type": "Thing",
+                    "name": {{ARTICLE_TITLE_JSON}}
+                },
+                "inLanguage": "ru-RU"
             }
-        },
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https://ekskursiya-v-mahachkale.vercel.app"
-        },
-        "articleSection": "Статьи",
-        "wordCount": 925,
-        "timeRequired": "PT5M"
+        ]
     }
     </script>
 </head>
 <body>
-    <div class="container">
-        <!-- Header -->
-        <header class="article-header">
-            <div class="header-content">
-                <h1 class="article-title" itemprop="headline">Лучшая экскурсия в Махачкале</h1>
-                <div class="article-meta">
-                    <time datetime="2026-01-10T21:13:48+00:00" itemprop="datePublished">10.01.2026</time>
-                    <meta itemprop="dateModified" content="2026-01-10T21:13:48+00:00">
-                    <span class="reading-time" itemprop="timeRequired" content="PT5M">Время чтения: 5 мин</span>
-                </div>
-            </div>
-        </header>
-
-        <!-- Author Section -->
-        <section class="author-section" itemscope itemtype="https://schema.org/Person" itemprop="author">
-            <div class="author-card">
-                <div class="author-avatar">
-                    <img src="https://ui-avatars.com/api/?name=Милана+Ларионова&amp;size=120&amp;background=4f46e5&amp;color=fff&amp;bold=true" alt="Милана Ларионова" itemprop="image" onerror="this.src='https://ui-avatars.com/api/?name=Милана+Ларионова&size=120&background=4f46e5&color=fff&bold=true'">
-                </div>
-                <div class="author-info">
-                    <div class="author-name" itemprop="name">Милана Ларионова</div>
-                    <p class="author-description" itemprop="description">Эксперт в области туризма и культурного наследия, специализирующийся на уникальных достопримечательностях Южного Дагестана. Обладает многолетним опытом организации автопешеходных туров и глубокими знаниями о местной истории и традициях. Автор статьи о экскурсиях на экраноплан &quot;Лунь&quot; и древний город Дербент, предлагает путешественникам неповторимые маршруты, объединяющие природу, культуру и локальные истории региона.</p>
-                    <div class="author-badges">
-                        <span class="badge expert" itemprop="jobTitle">Эксперт</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Main Article Content -->
-        <article class="article-content" itemscope itemtype="https://schema.org/Article">
-            <meta itemprop="headline" content="Лучшая экскурсия в Махачкале">
-            <meta itemprop="description" content="Лучшая экскурсия в Махачкале на 2026 год">
-            <meta itemprop="datePublished" content="2026-01-10T21:13:48+00:00">
-            <meta itemprop="dateModified" content="2026-01-10T21:13:48+00:00">
-            <meta itemprop="timeRequired" content="PT5M">
-            <meta itemprop="wordCount" content="925">
-            <div class="content-wrapper" itemprop="articleBody">
-                <p><a href="https://experience.tripster.ru/experience/Makhachkala/36423-ekranoplan-lun/?exp_partner=vk2334064&utm_source=vk2334064&utm_campaign=affiliates&utm_medium=link&erid=Y1jgkD6uB783K4Grye8ZQ1QR8JiF&utm-term=Makhachkala-36423">Узнать больше</a></p><p>Экскурсии на экраноплан Лунь» из Махачкалы — это уникальная возможность познакомиться с одним из самых необычных объектов советской инженерной мысли, а также посетить древнейший город России — Дербент. Маршруты сочетают в себе знакомство с историей, культурой и природой Южного Дагестана. Экскурсии проводятся как в формате автопешеходных туров, так и включают ночёвку в сельском доме или фотосессию. Гиды делятся локальными историями, показывают скрытые уголки региона и рассказывают о традициях местных жителей.</p><p>Дербент и экраноплан Лунь» — групповая экскурсия из Махачкалы<br> Программа включает посещение главных достопримечательностей самого древнего города страны — Дербента, а также осмотр легендарного экраноплана Лунь». Экскурсия проходит в формате группы, что делает её доступной и познавательной. Участники узнают историю крепости, магалов и смогут сделать фото у уникального летающего аппарата.</p><p><b>Плюсы</b>:</p><p>Возможность увидеть древние архитектурные памятники<br> Интересный рассказ гида о истории региона<br> Авто-пешеходный формат удобен для знакомства с городом</p><p><b>Отзывы</b>:<br> Туристы отмечают высокий уровень организации, интересную программу и профессионализм гида. Многие подчеркивают впечатляющее впечатление от экраноплана и атмосферу старины в Дербенте.</p><p><b>Цена</b>: 3 990 руб. за человека</p><h2>Экраноплан Лунь», Дербент и вечерние фонтаны — из Махачкалы<br> Эта экскурсия объединяет посещение исторического Дербента, знакомство с экранопланом и прогулку по городу в вечернее время, когда заработают знаменитые фонтаны. Программа рассчитана на целый день и включает комфортабельный трансфер, обед и сопровождение опытного гида.</h2><a href="https://experience.tripster.ru/experience/Makhachkala/36423-ekranoplan-lun/?exp_partner=vk2334064&utm_source=vk2334064&utm_campaign=affiliates&utm_medium=link&erid=Y1jgkD6uB783K4Grye8ZQ1QR8JiF&utm-term=Makhachkala-36423">Подробнее</a><p><b>Плюсы</b>:</p><p>Комплексное знакомство с городом и его символами<br> Вечерняя прогулка добавляет романтичности<br> Включён обед и трансфер</p><p><b>Отзывы</b>:<br> Участники хвалят насыщенность программы, уютные кафе и впечатляющие виды. Особенно выделяют визуальное оформление вечернего Дербента и атмосферу праздника.</p><p><b>Цена</b>: 5 990 руб. за человека</p><h2>Хучнинский водопад, экраноплан Лунь» и Дербент — поездка из Махачкалы<br> Маршрут включает три ключевые точки: Хучнинский водопад, экраноплан и древний город Дербент. Это отличный выбор для тех, кто хочет совместить природные красоты с культурно-историческим погружением. Экскурсия проводится в мини-группе, обеспечивая комфорт и персонализированный подход.</h2><a href="https://experience.tripster.ru/experience/Makhachkala/36423-ekranoplan-lun/?exp_partner=vk2334064&utm_source=vk2334064&utm_campaign=affiliates&utm_medium=link&erid=Y1jgkD6uB783K4Grye8ZQ1QR8JiF&utm-term=Makhachkala-36423">Подробнее</a><p><b>Плюсы</b>:</p><p>Разнообразие локаций<br> Мини-группы обеспечивают удобство и внимание гида<br> Трансфер включён</p><p><b>Отзывы</b>:<br> Путешественники подчёркивают разнообразие программы, живописные места и интересные рассказы гида. Особо отмечают Хучнинский водопад и атмосферу старого города.</p><p><b>Цена</b>: 8 990 руб. за группу</p><h2>Известный и нетуристический Южный Дагестан — с ночёвкой в сельском доме<br> Тур рассчитан на два дня и включает посещение Дербента, Самурского леса и второго по высоте села на Кавказе. Ночёвка происходит в частном доме, где гостей ждёт домашняя еда и гостеприимство. Это полноценное погружение в культуру и быт региона.</h2><a href="https://experience.tripster.ru/experience/Makhachkala/36423-ekranoplan-lun/?exp_partner=vk2334064&utm_source=vk2334064&utm_campaign=affiliates&utm_medium=link&erid=Y1jgkD6uB783K4Grye8ZQ1QR8JiF&utm-term=Makhachkala-36423">Подробнее</a><p><b>Плюсы</b>:</p><p>Глубокое погружение в культуру<br> Аутентичный опыт проживания<br> Посещение редко посещаемых мест</p><p><b>Отзывы</b>:<br> Гости ценят гостеприимство хозяев, вкусную еду и уникальные маршруты. Отмечают, что такой отдых позволяет лучше понять регион и его людей.</p><p><b>Цена</b>: 17 990 руб. за человека</p><h2>Фотопутешествие в Дербент из Махачкалы в мини-группе<br> Авторская фототуристическая программа с профессиональным фотографом. Вы сможете сделать качественные снимки в исторических районах Дербента, у крепости и возле экраноплана Лунь». Формат мини-группы обеспечивает внимание каждому участнику.</h2><a href="https://experience.tripster.ru/experience/Makhachkala/36423-ekranoplan-lun/?exp_partner=vk2334064&utm_source=vk2334064&utm_campaign=affiliates&utm_medium=link&erid=Y1jgkD6uB783K4Grye8ZQ1QR8JiF&utm-term=Makhachkala-36423">Подробнее</a><p><b>Плюсы</b>:</p><p>Работа с профессиональным фотографом<br> Подбор идеальных ракурсов<br> Локации с богатой историей</p><p><b>Отзывы</b>:<br> Пользователи положительно отзываются о качестве снимков, внимательном подходе гида и интересных локациях. Многие рекомендуют этот тур как для новичков, так и для опытных фотографов.</p><p><b>Цена</b>: 6 990 руб. за человека</p><h2>Дербент и экраноплан Лунь» из Махачкалы<br> Классическая экскурсия в Дербент с посещением крепости и экраноплана. Экскурсовод рассказывает о древней истории города, его роли на Великом шелковом пути и значении для культуры Кавказа. Тур проводится в формате авто-пешеходной прогулки.</h2><a href="https://experience.tripster.ru/experience/Makhachkala/36423-ekranoplan-lun/?exp_partner=vk2334064&utm_source=vk2334064&utm_campaign=affiliates&utm_medium=link&erid=Y1jgkD6uB783K4Grye8ZQ1QR8JiF&utm-term=Makhachkala-36423">Подробнее</a><p><b>Плюсы</b>:</p><p>Четко выстроенная программа<br> Интересные исторические справки<br> Удобный график и трансфер</p><p><b>Отзывы</b>:<br> Путешественники отмечают информативность, хорошую организацию и приятное общение с гидом. Многие советуют как вариант для первого знакомства с регионом.</p><p><b>Цена</b>: 3 990 руб. за человека</p><h2>Дербент и каспийский монстр Лунь» из Махачкалы<br> Экскурсия с оригинальным названием предлагает посетить один из древнейших городов мира и увидеть легендарный экраноплан. Это комбинированный маршрут, сочетающий осмотр достопримечательностей и интересные факты из истории СССР.</h2><a href="https://experience.tripster.ru/experience/Makhachkala/36423-ekranoplan-lun/?exp_partner=vk2334064&utm_source=vk2334064&utm_campaign=affiliates&utm_medium=link&erid=Y1jgkD6uB783K4Grye8ZQ1QR8JiF&utm-term=Makhachkala-36423">Подробнее</a><p><b>Плюсы</b>:</p><p>Необычное название привлекает внимание<br> Историко-технический интерес<br> Комфортный трансфер</p><p><b>Отзывы</b>:<br> Участники хвалят нестандартный подход к экскурсии и впечатляющие масштабы экраноплана. Отмечают, что это запоминающийся опыт.</p><p><b>Цена</b>: 4 990 руб. за человека</p><h2>Дербент и экраноплан Лунь»: путешествие из Махачкалы<br> Туристы посещают сказочный древний город и наблюдают за огромным экранопланом. Экскурсия подходит как для любителей истории, так и для тех, кто интересуется техникой и военной инженерией.</h2><a href="https://experience.tripster.ru/experience/Makhachkala/36423-ekranoplan-lun/?exp_partner=vk2334064&utm_source=vk2334064&utm_campaign=affiliates&utm_medium=link&erid=Y1jgkD6uB783K4Grye8ZQ1QR8JiF&utm-term=Makhachkala-36423">Подробнее</a><p><b>Плюсы</b>:</p><p>Увлекательное сочетание тем<br> Возможность сделать яркие фото<br> Гид делится малоизвестными фактами</p><p><b>Отзывы</b>:<br> Положительные <b>отзывы</b> охватывают интерес к истории, качество информации и организацию. Многие подчёркивают, что получили новые знания.</p><p><b>Цена</b>: 4 500 руб. за человека</p><h2>Дербент во всей красе и экраноплан Лунь» — из Махачкалы и Каспийска<br> Маршрут включает полное погружение в историю и культуру Дагестана. Экскурсия подходит как для индивидуальных туристов, так и для семей. Участники получают представление о жизни региона и его важнейших памятниках.</h2><a href="https://experience.tripster.ru/experience/Makhachkala/36423-ekranoplan-lun/?exp_partner=vk2334064&utm_source=vk2334064&utm_campaign=affiliates&utm_medium=link&erid=Y1jgkD6uB783K4Grye8ZQ1QR8JiF&utm-term=Makhachkala-36423">Подробнее</a><p><b>Плюсы</b>:</p><p>Обширная программа<br> Подходит для разных возрастов<br> Понятное и доступное изложение</p><p><b>Отзывы</b>:<br> Туристы благодарят за насыщенную программу, доброжелательного гида и интересные рассказы. Отмечают, что экскурсия оставила тёплые эмоции.</p><p><b>Цена</b>: 4 990 руб. за человека</p><h2>Большой тур из Махачкалы в древний Дербент<br> Это наиболее продолжительная и насыщенная программа. Включает посещение экраноплана Лунь», Девичьих бань, крепости и других достопримечательностей Дербента. Подходит для тех, кто хочет максимально глубоко погрузиться в историю региона.</h2><a href="https://experience.tripster.ru/experience/Makhachkala/36423-ekranoplan-lun/?exp_partner=vk2334064&utm_source=vk2334064&utm_campaign=affiliates&utm_medium=link&erid=Y1jgkD6uB783K4Grye8ZQ1QR8JiF&utm-term=Makhachkala-36423">Подробнее</a><p><b>Плюсы</b>:</p><p>Максимальное количество локаций<br> Подробное описание каждого объекта<br> Углублённое изучение культуры</p><p><b>Отзывы</b>:<br> Участники отмечают исчерпывающую информацию, интересные детали и хороший ритм экскурсии. Многие считают её лучшей для полного понимания региона.</p><p><b>Цена</b>: 6 990 руб. за человека</p><h2>Вопросы для закрытия темы Экскурсии на экраноплан Лунь» из Махачкалы» :<br> Какие экскурсии на экраноплан Лунь» из Махачкалы самые популярные?<br> Какие исторические достопримечательности можно посетить в рамках экскурсий на экраноплан Лунь»?<br> Какие экскурсии на экраноплан Лунь» из Махачкалы подходят для семей с детьми?<br> Как выбрать экскурсию на экраноплан Лунь» для большой компании?<br> Какие <b>отзывы</b> оставляют туристы об экскурсиях на экраноплан Лунь» из Махачкалы?<br> Какие цены на экскурсии на экраноплан Лунь» в 2025 году?<br> Какие экскурсии на экраноплан Лунь» включают фотосессии или работу с фотографом?<br> Какие экскурсии на экраноплан Лунь» из Махачкалы включают ночёвку или гастрономические элементы?<br> Какие необычные форматы экскурсий на экраноплан Лунь» доступны в Махачкале?<br> Какие природные локации можно совместить с посещением экраноплана Лунь» на экскурсии из Махачкалы<br>Реклама. Flight Marketplace Admin FZE. ИНН 9909618947</h2><a href="https://experience.tripster.ru/experience/Makhachkala/36423-ekranoplan-lun/?exp_partner=vk2334064&utm_source=vk2334064&utm_campaign=affiliates&utm_medium=link&erid=Y1jgkD6uB783K4Grye8ZQ1QR8JiF&utm-term=Makhachkala-36423">Подробнее</a>
-            </div>
-        </article>
-
-        <!-- Table Section -->
-        <section class="table-section">
-            <h2 class="section-title">Таблица сравнения</h2>
-            <div class="table-container">
-                <table border="1" cellpadding="5" cellspacing="0">
-    <thead>
-        <tr>
-            <th>Название экскурсии</th>
-            <th>Плюсы</th>
-            <th>Отзывы</th>
-            <th>Цена</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Экскурсия на экраноплан Лунь и Дербент</td>
-            <td>Возможность увидеть древние архитектурные памятники<br>Интересный рассказ гида о истории региона<br>Авто-пешеходный формат удобен для знакомства с городом</td>
-            <td>Высокий уровень организации, интересная программа, профессионализм гида<br>Впечатляющее впечатление от экраноплана и атмосфера старины в Дербенте</td>
-            <td>3 990 руб. за человека</td>
-        </tr>
-        <tr>
-            <td>Экраноплан Лунь, Дербент и вечерние фонтаны</td>
-            <td>Комплексное знакомство с городом и его символами<br>Вечерняя прогулка добавляет романтичности<br>Включён обед и трансфер</td>
-            <td>Насыщенность программы, уютные кафе и впечатляющие виды<br>Визуальное оформление вечернего Дербента и атмосфера праздника</td>
-            <td>5 990 руб. за человека</td>
-        </tr>
-    </tbody>
-</table>
-            </div>
-        </section>
-
-        
-
-        <!-- Footer -->
-        <footer class="article-footer">
-            <div class="footer-content">
-                <p>&copy; 2026 Милана Ларионова. Все права защищены.</p>
+    <div class="s-8f98-page-shell">
+        <div class="s-8f98-site-topbar" aria-label="Навигация по статье">
+            <div class="s-8f98-site-topbar__brand">
+                <span class="s-8f98-site-topbar__dot" aria-hidden="true"></span>
                 
             </div>
-        </footer>
+            
+        </div>
+
+        <main class="s-8f98-article-layout">
+            <article class="s-8f98-article-card" itemscope itemtype="https://schema.org/Article">
+                <meta itemprop="headline" content="{{ARTICLE_TITLE}}">
+                <meta itemprop="description" content="{{ARTICLE_DESCRIPTION}}">
+                <meta itemprop="datePublished" content="{{PUBLISH_DATE_ISO}}">
+                <meta itemprop="dateModified" content="{{PUBLISH_DATE_ISO}}">
+                <meta itemprop="timeRequired" content="PT{{READING_TIME}}M">
+                <meta itemprop="wordCount" content="{{WORD_COUNT}}">
+                <meta itemprop="mainEntityOfPage" content="{{ARTICLE_URL}}">
+
+                <header class="s-8f98-hero">
+                    <div class="s-8f98-eyebrow-row">
+                        
+                        
+                    </div>
+
+                    <h1 itemprop="headline">{{ARTICLE_TITLE}}</h1>
+                    
+
+                    <div class="s-8f98-meta-grid" aria-label="Ключевая информация о статье">
+
+                        <div class="s-8f98-meta-card">
+                            <div class="s-8f98-meta-label">Дата публикации</div>
+                            <div class="s-8f98-meta-value"><time datetime="{{PUBLISH_DATE_ISO}}">{{PUBLISH_DATE_FORMATTED}}</time></div>
+                        </div>
+                        <div class="s-8f98-meta-card">
+                            <div class="s-8f98-meta-label">Время чтения</div>
+                            <div class="s-8f98-meta-value">{{READING_TIME}} мин</div>
+                        </div>
+                        <div class="s-8f98-meta-card">
+                            <div class="s-8f98-meta-label">Объём текста</div>
+                            <div class="s-8f98-meta-value">{{WORD_COUNT}} слов</div>
+                        </div>
+                    </div>
+
+                    <section class="s-8f98-author-box" itemscope itemtype="https://schema.org/Person" itemprop="author">
+                        <div class="s-8f98-author-avatar">
+                            <img
+                                src="{{AUTHOR_AVATAR}}"
+                                alt="{{AUTHOR_NAME}}"
+                                itemprop="image"
+                                onerror="this.src='https://ui-avatars.com/api/?name={{AUTHOR_NAME_ENCODED}}&size=160&background=f1f5f9&color=111827&bold=true'"
+                            >
+                        </div>
+                        <div class="s-8f98-author-info">
+                            <div class="s-8f98-author-name-row">
+                                <div class="s-8f98-author-name" itemprop="name">{{AUTHOR_NAME}}</div>
+                                <div class="s-8f98-author-badge" itemprop="jobTitle">Эксперт</div>
+                            </div>
+                            <p class="s-8f98-author-description" itemprop="description">{{AUTHOR_DESCRIPTION}}</p>
+                        </div>
+                    </section>
+                </header>
+
+                <div class="s-8f98-article-body">
+                    <div class="s-8f98-article-content">
+
+                        <div class="s-8f98-notion-prose" itemprop="articleBody">
+                            {{ARTICLE_HTML_CONTENT}}
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <section class="s-8f98-table-card s-8f98-table-section" aria-labelledby="comparison-title">
+                <div class="s-8f98-section-head">
+                    <h2 id="s-8f98-comparison-title">Таблица сравнения</h2>
+
+                </div>
+
+                <div class="s-8f98-table-wrap">
+                    {{TABLE_CONTENT}}
+                </div>
+            </section>
+
+            <footer class="s-8f98-footer-card s-8f98-article-footer">
+                <div class="s-8f98-footer-inner">
+                    <p>&copy; {{CURRENT_YEAR}}</p>
+                   
+                </div>
+            </footer>
+        </main>
     </div>
+
+
 </body>
 </html>
-
-
